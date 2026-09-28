@@ -1,0 +1,40 @@
+---
+---
+<section class="section about" id="o-nama">
+  <div class="container grid grid-2 about__grid">
+    <div class="about__media" aria-hidden="true">
+      <!-- Zamijeniti pravom fotografijom obitelji / gospodarstva. -->
+      <div class="about__photo"><span>Fotografija gospodarstva</span></div>
+    </div>
+    <div class="about__copy">
+      <span class="eyebrow">O nama</span>
+      <h2>Malo gospodarstvo, veliko srce.</h2>
+      <p>
+        OPG O5U5 obiteljsko je poljoprivredno gospodarstvo posvećeno uzgoju svježeg
+        sezonskog povrća. Naši proizvodi uzgajaju se s punom pažnjom — bez
+        kompromisa u kvaliteti.
+      </p>
+      <p>
+        Od polja do vašeg stola u što kraćem roku: beremo po narudžbi kako bi svaka
+        rajčica, krastavac i krumpir do vas stigli u punom okusu. To je razlika koju
+        osjetite u tanjuru.
+      </p>
+      <p class="about__sign">— obitelj iza OPG O5U5, Vrbovec</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { background: var(--c-white); }
+  .about__grid { align-items: center; }
+  .about__photo {
+    aspect-ratio: 5 / 4;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(150deg, var(--c-leaf) 0%, var(--c-leaf-dark) 100%);
+    display: grid;
+    place-items: center;
+    box-shadow: var(--shadow-soft);
+  }
+  .about__photo span { color: rgba(255,255,255,0.85); font-weight: 700; font-size: 0.9rem; }
+  .about__sign { font-family: var(--font-head); font-style: italic; color: var(--c-ink-soft); }
+</style>

@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "opis": "Seed / izvor istine za sadrzaj sajta. Faza 3: ucitava se u Firestore (npr. kolekcija 'siteContent', doc 'home'). Ucitati JEDNOM (idempotentno), build/deploy samo cita.",
+    "firestore": {
+      "collection": "siteContent",
+      "doc": "home"
+    }
+  },
+  "site": {
+    "title": "OPG O5U5 — svježe sezonsko povrće iz Vrbovca",
+    "description": "Obiteljsko poljoprivredno gospodarstvo iz Vrbovca. Svježe sezonsko povrće, uzgojeno s ljubavlju. Okus doma, kvaliteta koju osjetiš."
+  },
+  "hero": {
+    "chip": "🍅 5U5 — OPET U PET",
+    "title": "Okus doma, kvaliteta koju osjetiš.",
+    "subtitle": "Obiteljsko gospodarstvo iz Vrbovca. Svježe sezonsko povrće, ubrano s ljubavlju i dostavljeno bez kompromisa u kvaliteti.",
+    "ctaPrimary": "Pogledaj ponudu",
+    "phone": "099 233 9515",
+    "facts": [
+      {
+        "title": "Svježe s polja",
+        "text": "ubrano po narudžbi"
+      },
+      {
+        "title": "Domaće & sezonsko",
+        "text": "uzgojeno u Vrbovcu"
+      },
+      {
+        "title": "Preuzimanje",
+        "text": "Zagreb-zapad ili po dogovoru"
+      }
+    ],
+    "badge": {
+      "value": "100%",
+      "label": "domaći uzgoj"
+    }
+  },
+  "about": {
+    "eyebrow": "O nama",
+    "title": "Malo gospodarstvo, veliko srce.",
+    "paragraphs": [
+      "OPG O5U5 obiteljsko je poljoprivredno gospodarstvo posvećeno uzgoju svježeg sezonskog povrća. Naši proizvodi uzgajaju se s ljubavlju i pažnjom — bez kompromisa u kvaliteti.",
+      "Od polja do vašeg stola u što kraćem roku: beremo po narudžbi kako bi svaka rajčica, krastavac i krumpir do vas stigli u punom okusu. To je razlika koju osjetite u tanjuru."
+    ],
+    "sign": "— obitelj iza OPG O5U5, Vrbovec"
+  },
+  "products": {
+    "eyebrow": "Ponuda",
+    "title": "Što sve raste kod nas",
+    "lead": "Cijene i dostupnost mijenjaju se sa sezonom. Za veće količine i rezervacije — javite se porukom ili na telefon.",
+    "note": "* Obratite nam se za cijene.",
+    "items": [
+      {
+        "name": "Rajčica za kuhanje",
+        "price": "1,50 €",
+        "unit": "/kg",
+        "tag": "Hit sezone",
+        "emoji": "🍅"
+      },
+      {
+        "name": "Rajčica za salatu / jelo",
+        "price": "2,00 €",
+        "unit": "/kg",
+        "tag": null,
+        "emoji": "🥗"
+      },
+      {
+        "name": "Krastavci za salatu",
+        "price": "2,00 €",
+        "unit": "/kg",
+        "tag": null,
+        "emoji": "🥒"
+      },
+      {
+        "name": "Tikvice",
+        "price": "1,00 €",
+        "unit": "/kg",
+        "tag": null,
+        "emoji": "🥬"
+      },
+      {
+        "name": "Krumpir žuti",
+        "price": "1,00 €",
+        "unit": "/kg",
+        "tag": null,
+        "emoji": "🥔"
+      },
+      {
+        "name": "Luk i ostalo sezonsko",
+        "price": "po sezoni",
+        "unit": "",
+        "tag": null,
+        "emoji": "🧅"
+      }
+    ]
+  },
+  "features": [
+    {
+      "icon": "🌱",
+      "title": "Ubrano po narudžbi",
+      "text": "Ne stoji na skladištu. Beremo kad naručite, pa do vas stiže u punom okusu."
+    },
+    {
+      "icon": "🚜",
+      "title": "S našeg polja u Vrbovcu",
+      "text": "Uzgojeno kod nas, s ljubavlju i pažnjom — znate točno odakle vam hrana dolazi."
+    },
+    {
+      "icon": "📦",
+      "title": "Jednostavno preuzimanje",
+      "text": "Zagreb-zapad (Črnomerec) ili po dogovoru za veće količine. Dogovor u par poruka."
+    }
+  ],
+  "reviews": [
+    {
+      "text": "Rajčica je bila odlična — skuhali smo cijelu turu i sve je bilo taman. Već se veselimo sljedećoj berbi.",
+      "author": "Zadovoljna kupica",
+      "place": "Zagreb"
+    },
+    {
+      "text": "Svježe, domaće i uvijek točno po dogovoru. Ovako povrće više ne kupujem u dućanu.",
+      "author": "Redoviti kupac",
+      "place": "Vrbovec"
+    }
+  ],
+  "contact": {
+    "title": "Naruči svježe povrće",
+    "lead": "Najlakše preko poruke ili telefona. Recite što trebate i kad, a mi dogovorimo preuzimanje.",
+    "phone": "099 233 9515",
+    "email": "o5u5.opg@gmail.com",
+    "address": "Dulepska 49, Vrbovec",
+    "pickup": "Zagreb-zapad (Črnomerec) ili po dogovoru"
+  },
+  "footer": {
+    "slogan": "Okus doma, kvaliteta koju osjetiš.",
+    "mibpg": "116984",
+    "instagram": "https://www.instagram.com/opgo5u5/",
+    "facebook": "https://www.facebook.com/p/OPG-O5U5-61589214363619/"
+  }
+}

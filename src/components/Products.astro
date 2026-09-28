@@ -1,0 +1,65 @@
+---
+// Cijene i proizvodi — u Fazi 3 (webshop) ovo se puni iz Firestorea.
+const products = [
+  { name: 'Rajčica za kuhanje', price: '1,50 €', unit: '/kg', tag: 'Hit sezone', emoji: '🍅' },
+  { name: 'Rajčica za salatu / jelo', price: '2,00 €', unit: '/kg', tag: null, emoji: '🥗' },
+  { name: 'Krastavci za salatu', price: '2,00 €', unit: '/kg', tag: null, emoji: '🥒' },
+  { name: 'Tikvice', price: '1,00 €', unit: '/kg', tag: null, emoji: '🥬' },
+  { name: 'Krumpir žuti', price: '1,00 €', unit: '/kg', tag: null, emoji: '🥔' },
+  { name: 'Luk i ostalo sezonsko', price: 'po sezoni', unit: '', tag: null, emoji: '🧅' },
+];
+---
+<section class="section ponuda" id="ponuda">
+  <div class="container">
+    <div class="ponuda__head">
+      <span class="eyebrow">Ponuda</span>
+      <h2>Što sve raste kod nas</h2>
+      <p class="lead">
+        Cijene i dostupnost mijenjaju se sa sezonom. Za veće količine i rezervacije —
+        javite se porukom ili na telefon.
+      </p>
+    </div>
+
+    <div class="grid grid-3 ponuda__grid">
+      {products.map((p) => (
+        <article class="card">
+          <div class="card__top">
+            <span class="card__emoji" aria-hidden="true">{p.emoji}</span>
+            {p.tag && <span class="card__tag">{p.tag}</span>}
+          </div>
+          <h3>{p.name}</h3>
+          <p class="card__price"><strong>{p.price}</strong><span>{p.unit}</span></p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ponuda { background: var(--c-cream); }
+  .ponuda__head { max-width: 60ch; margin-bottom: 40px; }
+  .card {
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .card__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .card__emoji { font-size: 2rem; }
+  .card__tag {
+    background: var(--c-brand-soft);
+    color: var(--c-brand-dark);
+    font-weight: 800;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    padding: 0.3em 0.7em;
+    border-radius: 999px;
+  }
+  .card h3 { margin-bottom: 0.35rem; }
+  .card__price strong { font-family: var(--font-head); font-size: 1.5rem; color: var(--c-brand); }
+  .card__price span { color: var(--c-ink-soft); font-weight: 700; }
+  .ponuda__note { margin-top: 28px; font-size: 0.85rem; color: var(--c-ink-soft); }
+</style>

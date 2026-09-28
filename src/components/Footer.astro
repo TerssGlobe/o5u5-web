@@ -1,0 +1,49 @@
+---
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container ftr">
+    <div class="ftr__brand">
+      <Logo size={36} />
+      <p>Okus doma, kvaliteta koju osjetiš.</p>
+    </div>
+    <div class="ftr__col">
+      <h4>Kontakt</h4>
+      <a href="tel:+385992339515">099 233 9515</a>
+      <a href="mailto:o5u5.opg@gmail.com">o5u5.opg@gmail.com</a>
+      <span>Dulepska 49, Vrbovec</span>
+    </div>
+    <div class="ftr__col">
+      <h4>Pratite nas</h4>
+      <a href="https://www.instagram.com/opgo5u5/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/p/OPG-O5U5-61589214363619/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="ftr__bottom">
+    <div class="container">
+      <span>© {year} OPG O5U5 · MIBPG 116984 · Vrbovec</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--c-brand-dark); color: rgba(255,255,255,0.9); }
+  .ftr {
+    display: grid;
+    gap: 28px;
+    padding-block: 48px;
+  }
+  .ftr__brand p { color: rgba(255,255,255,0.7); margin-top: 12px; max-width: 30ch; }
+  .ftr :global(.logo__text strong) { color: #fff; }
+  .ftr :global(.logo__text small) { color: var(--c-brand-soft); }
+  .ftr__col { display: flex; flex-direction: column; gap: 8px; }
+  .ftr__col h4 { margin: 0 0 6px; font-family: var(--font-body); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); }
+  .ftr__col a, .ftr__col span { color: rgba(255,255,255,0.9); }
+  .ftr__col a:hover { color: #fff; text-decoration: underline; }
+  .ftr__bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-block: 18px; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  @media (min-width: 720px) {
+    .ftr { grid-template-columns: 2fr 1fr 1fr; }
+  }
+</style>

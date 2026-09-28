@@ -1,0 +1,38 @@
+---
+// Privremeni originalni amblem (generička rajčica).
+// Zamijeniti službenim logom (SVG) kad ga vlasnik pošalje.
+interface Props { size?: number; }
+const { size = 40 } = Astro.props;
+---
+<span class="logo" style={`--s:${size}px`}>
+  <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
+    <circle cx="32" cy="38" r="22" fill="var(--c-brand)"></circle>
+    <circle cx="24" cy="32" r="5" fill="#e0576a" opacity="0.55"></circle>
+    <path d="M32 18 C30 10 24 8 20 10 C26 12 26 16 24 18 Z" fill="var(--c-leaf)"></path>
+    <path d="M32 18 C34 10 40 8 44 10 C38 12 38 16 40 18 Z" fill="var(--c-leaf)"></path>
+    <path d="M32 20 L32 12" stroke="var(--c-leaf-dark)" stroke-width="3" stroke-linecap="round"></path>
+  </svg>
+  <span class="logo__text">
+    <strong>OPG&nbsp;O5U5</strong>
+    <small>OPET U PET</small>
+  </span>
+</span>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: 0.6em; }
+  .logo__text { display: flex; flex-direction: column; line-height: 1; }
+  .logo__text strong {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--c-ink);
+    letter-spacing: 0.01em;
+  }
+  .logo__text small {
+    font-weight: 800;
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    color: var(--c-brand);
+    margin-top: 3px;
+  }
+</style>

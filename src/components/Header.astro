@@ -1,0 +1,45 @@
+---
+import Logo from './Logo.astro';
+---
+<header class="site-header">
+  <div class="container hdr">
+    <a href="#top" class="hdr__logo"><Logo size={38} /></a>
+    <nav class="hdr__nav">
+      <a href="#o-nama">O nama</a>
+      <a href="#ponuda">Ponuda</a>
+      <a href="#zasto">Zašto mi</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="tel:+385992339515" class="btn btn-primary hdr__cta">Naruči</a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 247, 241, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--c-line);
+  }
+  .hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 12px;
+  }
+  .hdr__nav { display: none; gap: 28px; }
+  .hdr__nav a {
+    color: var(--c-ink);
+    font-weight: 700;
+    font-size: 0.98rem;
+  }
+  .hdr__nav a:hover { color: var(--c-brand); }
+  .hdr__cta { padding: 0.6em 1.2em; font-size: 0.95rem; }
+
+  @media (min-width: 860px) {
+    .hdr__nav { display: flex; }
+  }
+</style>

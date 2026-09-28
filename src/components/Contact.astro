@@ -1,0 +1,93 @@
+---
+---
+<section class="section kontakt" id="kontakt">
+  <div class="container grid grid-2 kontakt__grid">
+    <div class="kontakt__copy">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Naruči svježe povrće</h2>
+      <p class="lead">
+        Recite što trebate i kad, a mi
+        dogovorimo preuzimanje.
+      </p>
+
+      <ul class="kontakt__list">
+        <li>
+          <span class="kontakt__ico">📞</span>
+          <div><small>Telefon</small><a href="tel:+385992339515">099 233 9515</a></div>
+        </li>
+        <li>
+          <span class="kontakt__ico">✉️</span>
+          <div><small>E-mail</small><a href="mailto:o5u5.opg@gmail.com">o5u5.opg@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="kontakt__ico">📍</span>
+          <div><small>Adresa</small><span>Dulepska 49, Vrbovec</span></div>
+        </li>
+        <li>
+          <span class="kontakt__ico">🚚</span>
+          <div><small>Preuzimanje</small><span>Zagreb-zapad (Črnomerec) ili po dogovoru</span></div>
+        </li>
+      </ul>
+
+      <div class="kontakt__cta">
+        <a href="tel:+385992339515" class="btn btn-primary">Nazovi</a>
+        <a href="mailto:o5u5.opg@gmail.com" class="btn btn-ghost">Pošalji e-mail</a>
+      </div>
+    </div>
+
+    <!-- Statična kontakt forma (Faza 1). U Fazi 3 spaja se na Cloud Function / e-mail servis. -->
+    <form class="kontakt__form" action="mailto:o5u5.opg@gmail.com" method="post" enctype="text/plain">
+      <label>Ime i prezime
+        <input type="text" name="ime" placeholder="Vaše ime" required />
+      </label>
+      <label>Telefon
+        <input type="tel" name="telefon" placeholder="09x xxx xxxx" />
+      </label>
+      <label>Što vas zanima?
+        <textarea name="poruka" rows="4" placeholder="npr. 5 kg rajčice za kuhanje, preuzimanje u petak"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Pošalji upit</button>
+      <p class="kontakt__form-note">Slanjem se otvara vaš e-mail klijent.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .kontakt { background: var(--c-white); }
+  .kontakt__grid { align-items: start; gap: 48px; }
+  .kontakt__list { list-style: none; margin: 24px 0; padding: 0; display: grid; gap: 18px; }
+  .kontakt__list li { display: flex; gap: 14px; align-items: center; }
+  .kontakt__ico {
+    display: inline-grid; place-items: center;
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--c-brand-soft); font-size: 1.2rem; flex: none;
+  }
+  .kontakt__list small { display: block; color: var(--c-ink-soft); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .kontakt__list a, .kontakt__list span { font-weight: 700; color: var(--c-ink); }
+  .kontakt__list a:hover { color: var(--c-brand); }
+  .kontakt__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+  .kontakt__form {
+    background: var(--c-cream);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: grid;
+    gap: 16px;
+    box-shadow: var(--shadow-soft);
+  }
+  .kontakt__form label { display: grid; gap: 6px; font-weight: 700; font-size: 0.92rem; }
+  .kontakt__form input,
+  .kontakt__form textarea {
+    font: inherit;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--c-line);
+    background: var(--c-white);
+    color: var(--c-ink);
+    resize: vertical;
+  }
+  .kontakt__form input:focus,
+  .kontakt__form textarea:focus { outline: 2px solid var(--c-brand); border-color: transparent; }
+  .kontakt__form-note { margin: 0; font-size: 0.8rem; color: var(--c-ink-soft); }
+</style>

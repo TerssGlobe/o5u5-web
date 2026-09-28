@@ -1,0 +1,55 @@
+---
+// Reprezentativne recenzije. Zamijeniti pravim, potvrđenim recenzijama kupaca.
+const reviews = [
+  {
+    text: 'Rajčica je bila odlična — skuhali smo cijelu turu i sve je bilo taman. Već se veselimo sljedećoj berbi.',
+    author: 'Zadovoljan kupac',
+    place: 'Zagreb',
+  },
+  {
+    text: 'Svježe, domaće i uvijek točno po dogovoru. Ovako povrće se ne može naći u dućanu.',
+    author: 'Redoviti kupac',
+    place: 'Vrbovec',
+  },
+];
+---
+<section class="section recenzije">
+  <div class="container">
+    <div class="recenzije__head">
+      <span class="eyebrow">Povjerenje</span>
+      <h2>Kupci potvrđuju kvalitetu</h2>
+    </div>
+    <div class="grid grid-2">
+      {reviews.map((r) => (
+        <figure class="quote">
+          <div class="quote__stars" aria-label="5 od 5">★★★★★</div>
+          <blockquote>{r.text}</blockquote>
+          <figcaption>{r.author} · <span>{r.place}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .recenzije { background: var(--c-cream); }
+  .recenzije__head { margin-bottom: 36px; }
+  .quote {
+    margin: 0;
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+  }
+  .quote__stars { color: var(--c-brand); letter-spacing: 0.15em; margin-bottom: 12px; }
+  .quote blockquote {
+    margin: 0 0 16px;
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--c-ink);
+  }
+  .quote figcaption { font-weight: 800; color: var(--c-ink); }
+  .quote figcaption span { color: var(--c-ink-soft); font-weight: 600; }
+</style>

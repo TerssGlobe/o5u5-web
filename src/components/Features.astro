@@ -1,0 +1,55 @@
+---
+const items = [
+  {
+    icon: '🌱',
+    title: 'Ubrano po narudžbi',
+    text: 'Ne stoji na skladištu. Beremo kad naručite, pa do vas stiže u punom okusu.',
+  },
+  {
+    icon: '🚜',
+    title: 'S našeg polja u Vrbovcu',
+    text: 'Uzgojeno kod nas, s ljubavlju i pažnjom — znate točno odakle vam hrana dolazi.',
+  },
+  {
+    icon: '📦',
+    title: 'Jednostavno preuzimanje',
+    text: 'Zagreb-zapad (Črnomerec) ili po dogovoru za veće količine. Dogovor u par poruka.',
+  },
+];
+---
+<section class="section zasto" id="zasto">
+  <div class="container">
+    <div class="zasto__head">
+      <span class="eyebrow">Zašto mi</span>
+      <h2>Domaće, svježe i jednostavno</h2>
+    </div>
+    <div class="grid grid-3">
+      {items.map((it) => (
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">{it.icon}</span>
+          <h3>{it.title}</h3>
+          <p>{it.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .zasto { background: var(--c-white); }
+  .zasto__head { margin-bottom: 40px; }
+  .feature {
+    padding: 8px 4px;
+  }
+  .feature__icon {
+    display: inline-grid;
+    place-items: center;
+    width: 56px; height: 56px;
+    border-radius: 16px;
+    background: var(--c-brand-soft);
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+  .feature h3 { margin-bottom: 0.4rem; }
+  .feature p { color: var(--c-ink-soft); margin: 0; }
+</style>

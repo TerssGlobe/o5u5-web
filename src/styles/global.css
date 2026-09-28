@@ -1,0 +1,129 @@
+/* ==========================================================================
+   OPG O5U5 — dizajn sustav (design tokens)
+   Ovaj sloj je tema. Za drugog klijenta samo se mijenjaju vrijednosti ovdje.
+   ========================================================================== */
+
+:root {
+  /* Brend boje — topli "rajčica" crveni + zelena svježina */
+  --c-brand: #c62231;        /* glavna crvena (rajčica) */
+  --c-brand-dark: #9c1622;   /* tamnija crvena za hover/kontrast */
+  --c-brand-soft: #f6d9d3;   /* meka crvena za pozadine */
+  --c-leaf: #4d7c3f;         /* zelena (list/povrće) */
+  --c-leaf-dark: #3a5f2f;
+
+  /* Neutralne / pozadine */
+  --c-cream: #fff7f1;        /* topla krem pozadina */
+  --c-cream-2: #fdeee4;
+  --c-ink: #2a211d;          /* glavni tekst */
+  --c-ink-soft: #6a5b53;     /* sekundarni tekst */
+  --c-line: #ecd9cd;         /* linije / borderi */
+  --c-white: #ffffff;
+
+  /* Tipografija */
+  --font-head: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Razmaci i radijusi */
+  --radius: 16px;
+  --radius-lg: 28px;
+  --shadow: 0 10px 30px rgba(150, 30, 30, 0.10);
+  --shadow-soft: 0 4px 14px rgba(150, 30, 30, 0.08);
+  --maxw: 1120px;
+  --gutter: 20px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--c-ink);
+  background: var(--c-cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 0.4em;
+  color: var(--c-ink);
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--c-brand); text-decoration: none; }
+a:hover { color: var(--c-brand-dark); }
+
+img { max-width: 100%; display: block; }
+
+/* Layout helpers */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding: clamp(56px, 9vw, 110px) 0; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--c-brand);
+  margin-bottom: 0.7rem;
+}
+
+.lead { font-size: 1.15rem; color: var(--c-ink-soft); max-width: 60ch; }
+
+/* Gumbi */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 800;
+  font-family: var(--font-body);
+  padding: 0.85em 1.5em;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+  font-size: 1rem;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--c-brand); color: #fff; }
+.btn-primary:hover { background: var(--c-brand-dark); color: #fff; }
+.btn-ghost { background: transparent; color: var(--c-brand); border-color: var(--c-brand); }
+.btn-ghost:hover { background: var(--c-brand); color: #fff; }
+
+/* Chip / oznaka */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  background: var(--c-brand-soft);
+  color: var(--c-brand-dark);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  padding: 0.4em 0.9em;
+  border-radius: 999px;
+}
+
+.grid { display: grid; gap: 24px; }
+
+@media (min-width: 720px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
