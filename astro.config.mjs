@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://o5u5.hr',
+  site: 'https://terssglobe.github.io',
+  base: '/o5u5-web',
 });
